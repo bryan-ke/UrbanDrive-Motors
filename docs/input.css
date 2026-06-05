@@ -190,4 +190,6 @@ img.displaySlide {
 
 .bg-cta-partner {
   background-image: url('/images/bg-cta-partner.jpg');
+  width: 100%;
+  height: auto;
 }
