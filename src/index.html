@@ -1,0 +1,576 @@
+<!doctype html>
+<html class="">
+<head>
+  <title>UB Drive - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+VIC+Guides&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-300">
+
+  <div id="nav-bar-modal" class="class-modal fixed z-100 h-screen w-full bg-white/35 hidden">
+    <div class="mod-cont flex justify-center items-center h-screen scale-in-ver-center">
+      <div class="mod-space bg-gray-300 h-175 w-115 rounded-lg flex flex-col items-center slide-in-bottom">
+        <div class="mod-header w-full rounded-t-lg flex justify-end text-center">
+          <button class="w-10 h-10" onclick="deactModal()">
+            X
+          </button>
+        </div>
+          <h3 class="text-2xl mt-6 title-font">Login / Register</h3>
+        <form class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 mt-8">
+          <fieldset class="fieldset">
+            <label class="label">Email</label>
+            <input type="email" class="input validator" placeholder="Email" required />
+            <p class="validator-hint hidden">Required</p>
+          </fieldset>
+          <label class="fieldset">
+            <span class="label">Password</span>
+            <input type="password" class="input validator" placeholder="Password" required />
+            <span class="validator-hint hidden">Required</span>
+          </label>
+          <button class="btn btn-neutral mt-4" type="submit">Login</button>
+          <button class="btn btn-ghost mt-1" type="reset">Reset</button>
+        </form>
+        <p class="my-4 text-lg">— or —</p>
+        <button class="btn mb-5 w-70"><svg width="20px" height="20px" viewBox="-26.2 -26.2 314.40 314.40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"></path><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"></path><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"></path><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"></path></g></svg>continue with Google</button>
+        <button class="btn mb-5 w-70"><svg width="20px" height="20px" viewBox="126.445 2.281 589 589" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="420.945" cy="296.781" r="294.5" fill="#3c5a9a"></circle><path d="M516.704 92.677h-65.239c-38.715 0-81.777 16.283-81.777 72.402.189 19.554 0 38.281 0 59.357H324.9v71.271h46.174v205.177h84.847V294.353h56.002l5.067-70.117h-62.531s.14-31.191 0-40.249c0-22.177 23.076-20.907 24.464-20.907 10.981 0 32.332.032 37.813 0V92.677h-.032z" fill="#ffffff"></path></g></svg>continue with Facebook</button>
+        <hr class="w-[80%]" />
+        <button class="btn w-80 my-5">Register</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="navigation">
+    <nav class="navbar bg-base-300 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu dropdown-content bg-base-300 rounded-box z-1 p-2 shadow">
+            <ul class="menu rounded-box xs:w-41 md:w-56">
+              <li class="my-3">
+                <details close>
+                  <summary>Brand New</summary>
+                  <ul>
+                    <li><a>Sedan</a></li>
+                    <li><a>SUV</a></li>
+                    <li><a>Others</a>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details close>
+                  <summary>Second Hand</summary>
+                  <ul>
+                    <li><a>Sedan</a></li>
+                    <li><a>SUV</a></li>
+                    <li><a>Others</a>
+                  </ul>
+                </details>
+              </li>
+              <li class="my-3">
+                <details close>
+                  <summary>Rental</summary>
+                  <ul>
+                    <li><a>Sedan</a></li>
+                    <li><a>SUV</a></li>
+                    <li><a>Others</a>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </ul>
+        </div>
+        <a class="text-lg xs:text-sm sm:text-lg mx-3" href="#">UrbanDrive Motors</a>
+        <div class="navbar-center hidden lg:flex lg:flex-row">
+          <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="btn btn-ghost">Brand New</div>
+            <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-2 w-52 p-2 shadow-sm">
+              <li><a>Sedan</a></li>
+              <li><a>SUV</a></li>
+              <li><a>Others</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="btn btn-ghost">Used Cars</div>
+            <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-2 w-52 p-2 shadow-sm">
+              <li><a>Sedan</a></li>
+              <li><a>SUV</a></li>
+              <li><a>Others</a></li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-hover">
+            <div tabindex="0" role="button" class="btn btn-ghost">Rental</div>
+            <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-2 w-52 p-2 shadow-sm">
+              <li><a>Sedan</a></li>
+              <li><a>SUV</a></li>
+              <li><a>Others</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="flex flex-row xs:border-0  lg:border-black lg:border lg:rounded-sm h-10">
+          <button class="btn btn-ghost btn-square h-auto rounded-none rounded-l-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          </button>
+          <input type="text" placeholder="Search" class="pl-2 xs:hidden lg:block outline-0 rounded-none" />
+        </div>
+        <button class="btn xs:btn-xs md:btn-md ml-8 xs:ml-2 h-10" onclick="activeModal()">Login / Sign Up</button>
+      </div>
+    </nav>
+  </section>
+
+  <section id="ud-hero">
+    <div class="relative grid grid-cols-1">
+        <img src="../public/images/hero-load.jpg" class="block w-full h-auto">
+        <div class="ud-text absolute flex flex-col mt-[5%] ml-[1.2%]">
+          <h1 class=" text-white xs:text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl hero-font">UrbanDrive Motors</h1>
+          <h2 class=" text-white xs:text-xs sm:text-md md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:pl-2 xs:pl-0.5 body-font">Where every drive begins</h2>
+          <button class="bg-amber-300 btn btn-xs xs:btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl xl:w-65 lg:w-55 md:w-42 sm:w-30 xs:w-25 lg:mt-5 md:mt-3 sm:mt-2 xs:mt-1.5 lg:ml-2 md:ml-1.5 xs:ml-1 heartbeat">Learn More!</button>
+        </div>
+    </div>
+  </section>
+
+  <section id="new-arrivals">
+    <div class="new-arrivals-cont flex flex-col items-center justify-center">
+      <div class="header-na flex flex-row justify-center items-center w-full">
+        <h2 class="lg:text-7xl md:text-5xl sm:text-4xl xs:text-2xl my-10 mr-auto xs:pr-10 xl:pr-6 title-font">New Arrivals</h2>
+<!--mobile filter menu beginning-->
+        <div class="order-first dropdown dropdown-start mr-auto">
+          <button tabindex="0" role="button" class="btn btn-ghost xl:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-funnel-icon lucide-funnel xs:h-4 xs:w-4 md:w-5 md:h-5 lg:h-6 lg:w-6 "><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg></button>
+            <ul tabindex="-1" class="dropdown-content menu bg-gray-100 rounded-box z-1 xs:w-51 md:w-65 p-2 shadow-sm">
+              <ul class="menu filter-menu xs:w-48 md:w-56 self-center justify-self-center">
+                <li class="my-5">
+                  <details close>
+                    <summary>Brand New</summary>
+                    <ul>
+                      <li><a id="bn-sedan">Sedan</a></li>
+                      <li><a id="bn-suv">SUV</a></li>
+                      <li><a id="bn-others">Others</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li class="mb-5">
+                  <details close>
+                    <summary>Second Hand</summary>
+                    <ul>
+                      <li><a id="sh-sedan">Sedan</a></li>
+                      <li><a id="sh-suv">SUV</a></li>
+                      <li><a id="sh-others">Others</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details close>
+                    <summary>Rental</summary>
+                    <ul>
+                      <li><a id="rnt-sedan">Sedan</a></li>
+                      <li><a id="rnt-suv">SUV</a></li>
+                      <li><a id="rnt-others">Others</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <button class="btn btn-sm mt-15 w-35 self-center text-md" onclick="clearFilter()">Reset</button>
+              </ul>
+            </ul>
+          </div>
+<!--mobile filter menu end-->
+        </div>
+      </div>
+      <div class="na-section flex flex-row justify-center">
+<!--large screen filter menu beginning-->
+        <div class="na-side mx-3 h-80 w-60 flex flex-col rounded-2xl overflow-auto bg-gray-100 xl:block xs:hidden">
+          <ul class="menu filter-menu w-56 self-center justify-self-center">
+            <li class="my-5">
+              <details close>
+                <summary>Brand New</summary>
+                <ul>
+                  <li><a id="bn-sedan">Sedan</a></li>
+                  <li><a id="bn-suv">SUV</a></li>
+                  <li><a id="bn-others">Others</a></li>
+                </ul>
+              </details>
+            </li>
+            <li class="mb-5">
+              <details close>
+                <summary>Second Hand</summary>
+                <ul>
+                  <li><a id="sh-sedan">Sedan</a></li>
+                  <li><a id="sh-suv">SUV</a></li>
+                  <li><a id="sh-others">Others</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details close>
+                <summary>Rental</summary>
+                <ul>
+                  <li><a id="rnt-sedan">Sedan</a></li>
+                  <li><a id="rnt-suv">SUV</a></li>
+                  <li><a id="rnt-others">Others</a></li>
+                </ul>
+              </details>
+            </li>
+            <button class="btn btn-sm mt-15 w-35 self-center text-md" onclick="clearFilter()">Reset</button>
+          </ul>
+        </div>
+<!--large screen filter menu end-->
+        <div class="na-main pl-5 xs:w-full md:w-200 lg:w-250 h-150 rounded-2xl mb-5 overflow-auto bg-gray-100 pb-5">
+          <div class="card sh suv cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+                <img
+                src="../public/images/Trend1-SUV 2.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl"/>
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">Kia SUV automaton 3000</h2>
+              <p class="body-font">Kia's latest installment in its automaton 3000 series comes in this slick SUV package.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+          <div class="card sh sedan cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+                <img
+                src="../public/images/Trend2-sedan.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl" />
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">Mercedes Onyx EV (Sedan Edition)</h2>
+              <p class="body-font">A bold expression of luxury and innovation, the Mercedes Onyx EV combines elegant craftsmanship with a commanding all-black presence built to turn heads wherever it goes.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bn sedan cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+              <img
+                src="../public/images/Trend3-sedan.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl" />
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">BMW Sportster V3</h2>
+              <p class="body-font">Blending the sophistication of a modern sedan with the aggressive styling of a sports coupe, the BMW Sportster V3 delivers a refined drive with unmistakable attitude.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+          <div class="card rnt others cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+              <img
+                src="../public/images/Trend4-pickup.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl" />
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">Ford Wildtrack 4x4 Pick-up Truck</h2>
+              <p class="body-font">Built for drivers who demand confidence on every road, the Ford Wildtrack 4x4 combines rugged capability with a sleek, adventure-ready design made for both work and escape.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bn sedan cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+              <img
+                src="../public/images/Trend5-sedan white.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl" />
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">Porsche Sky HEV</h2>
+              <p class="body-font">The Porsche Sky HEV fuses high-performance styling with everyday practicality, offering a sleek four-door silhouette powered by next-generation hybrid efficiency.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bn others cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+              <img
+                src="../public/images/Trend6-Jeep 1.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl" />
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">Biong Ming Red Dragon</h2>
+              <p class="body-font">Crafted with bold Chinese luxury in mind, the Biong Ming Red Dragon stands out with its striking red finish, rugged but premium SUV styling, and commanding road presence inspired by modern elegance.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+          <div class="card bn suv cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+              <img
+                src="../public/images/Trend7-SUV 1.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl" />
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">Hyundai Mountainview Crossover HEV</h2>
+              <p class="body-font">Designed for urban comfort and weekend exploration, the Hyundai Mountainview HEV delivers modern hybrid performance wrapped in a stylish and versatile crossover body.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+          <div class="card sh others cars na-cards lg:card-side bg-base-100 shadow-sm w-[90%] justify-self-center mt-5 fade-in">
+            <figure>
+                <img
+                src="../public/images/Trend8-Pick up 1.jpg"
+                alt="Suv car parked on top of a mountain" class="lg:max-w-90 xs:w-full xs:h-auto h-80 p-2 rounded-2xl" />
+            </figure>
+            <div class="card-body max-w-120 mx-auto">
+              <h2 class="card-title">Toyota TerraForge 4x4</h2>
+              <p class="body-font">Engineered for drivers who live beyond the pavement, the Toyota TerraForge 4x4 combines rugged off-road capability with dependable performance and a bold, trail-ready design.</p>
+              <div class="card-actions justify-center mt-3">
+                <button class="btn bg-amber-300">More details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="carou-part">
+      <div class="slider flex lg:flex-row lg:justify-evenly md:flex-col md:justify-center xs:flex-col xs:justify-center w-full bg-center bg-no-repeat bg-[url('../public/images/bg-cta-partner.jpg')]">
+        <div class="slide-images my-5 mx-auto relative lg:w-230 xs:w-full">
+          <img src="../public/images/carousel1-Sedan 1.jpg" class="slides w-full h-auto rounded-xl fade-in">
+          <img src="../public/images/carousel2-SUV 3.jpg" class="slides w-full h-auto rounded-xl fade-in">
+          <img src="../public/images/carousel3-Silver sports car 1.jpg" class="slides w-full h-auto rounded-xl fade-in">
+          <img src="../public/images/carousel4-crossover 1.jpg" class="slides w-full h-auto rounded-xl fade-in">
+          <img src="../public/images/carousel5-sports car 2.jpg" class="slides w-full h-auto rounded-xl fade-in">
+          <img src="../public/images/carousel6-Sedan 2.jpg" class="slides w-full h-auto rounded-xl fade-in">
+          <button class="prev absolute top-[50%] -translate-y-1/2 left-[2%] lg:text-4xl md:text-2xl sm:text-sm bg-black/45 text-white px-2 py-3" onclick="prevSlide()">&#10094</button>
+          <button class="next absolute top-[50%] -translate-y-1/2 right-[2%] lg:text-4xl md:text-2xl sm:text-sm bg-black/45 text-white px-2 py-3" onclick="nextSlide()">&#10095</button>
+        </div>
+        <div class="value-statement lg:w-200 xs:w-full self-center bg-[#2A2E35]/85 py-15 px-3 rounded-xl xs:mb-5 lg:mx-15">
+          <h2 class="xl:text-5xl md:text-3xl text-center m-0 p-0 text-[#ffffffe6] body-font">At UrbanDrive Motors, we prioritize your time and investment by delivering reliable new <br> and pre-owned vehicles you can trust from day one.</h2>
+        </div>
+      </div>
+  </section>
+
+  <section id="partners" class="bg-white">
+      <div class="partners-container h-full self-center ">
+        <div class="py-10 w-full h-auto flex justify-center">
+              <h2 class="lg:text-7xl md:text-5xl sm:text-4xl xs:text-2xl title-font">Our Partners</h2>
+        </div>
+        <div class="partner-img flex flex-row xs:flex-wrap items-center justify-evenly pb-10">
+            <img src="../public/images/part-audi.jpg" class="xl:w-70 xl:h-60 lg:w-50 lg:h-40 md:w-40 md:h-30 xs:w-30 xs:h-20">
+            <img src="../public/images/part-BYD.jpg" class="xl:w-70 xl:h-60 lg:w-50 lg:h-40 md:w-40 md:h-30 xs:w-30 xs:h-20">
+            <img src="../public/images/part-suzuki.jpg" class="xl:w-70 xl:h-60 lg:w-50 lg:h-40 md:w-40 md:h-30 xs:w-30 xs:h-20">
+            <img src="../public/images/part-toyota.jpg" class="xl:w-70 xl:h-60 lg:w-50 lg:h-40 md:w-40 md:h-30 xs:w-30 xs:h-20">
+        </div>
+      </div>
+    
+  </section>
+
+  <section id="cta-partner">
+    <div class="cta-bg bg-center bg-no-repeat bg-[url('../public/images/bg-cta-partner.jpg')]">
+        <h3 class="lg:text-5xl md:text-4xl sm:text-3xl xs:text-xl p-3 mb-5 justify-self-center text-white">Want to be our partner?</h3>
+        <div class=" flex flex-row justify-center items-center px-10 mr-0">
+          <div class="partner-cta h-auto max-w-280 xs:w-screen flex flex-row justify-center items-center text-center">
+            <!-- <img class="xl:h-80 lg:h-70 md:h-60 sm:h-50 xs:h-40" src="../public/images/newsletter-cta-pic1.png"> -->
+            <div class="left-cta mx-auto flex flex-col justify-center items-center">
+              <p class="xl:text-2xl lg:text-xl md:text-[0.9rem] xs:text-sm p-5 flex-wrap text-white body-font">As partners with UrbanDrive Motors, you will gain access to a growing network of serious car buyers actively searching for trusted automotive brands, and unlock new sales opportunities through targeted marketing campaigns designed to bring more attention to your vehicles and services.</p>
+              <h3 class="lg:text-3xl md:text-2xl sm:text-xl xs:text-base mb-6 text-white">Email us to learn more!</h3>
+              <button class="btn lg:btn-md md:btn-md xs:btn-sm lg:w-40 md:w-30 xs:w-30 lg:text-lg xs:text-[0.8rem] justify-self-center self-center mb-6 bg-amber-300">Message now!</button>
+            </div>
+            <!-- <img class="xl:h-80 lg:h-70 md:h-60 sm:h-50 xs:h-40" src="../public/images/newsletter-cta-pic2.png"> -->
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <hr class="my-5 mx-5">
+  
+  <section id="testimonials">
+    <div class="test-conta flex flex-col items-center h-[80%] mb-15 mr-auto px-3">
+      <div class="test-header text-center">
+        <h2 class="lg:text-7xl md:text-5xl sm:text-4xl xs:text-2xl p-3 title-font">Testimonials</h2>
+        <p class="lg:text-3xl md:text-lg sm:text-md xs:text-sm px-3 body-font">Read what our satisfied customers had to say about our services.</p>
+      </div>
+      <div class="test-display relative mt-16">
+        <div class="carousel carousel-center carousel-horizontal flex items-center rounded-box lg:max-w-195 md:max-w-165 xs:max-w-95 md:h-125 xs:h-155 space-x-4 p-4 border ml-1">
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-liam-cortez.jpg">
+                <p class="mt-10 body-font">"UrbanDrive Motors helped us find a reliable vehicle for our delivery operations without making the process difficult. Communication was smooth, and the transaction felt straightforward from start to finish."</p>
+                <h2 class="card-title">Liam Cortez</h2>
+                <h3>of Northgate Supplies</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body w-full">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-erika-valdez.jpg">
+                <p class="mt-10 body-font">"I rented a sedan from UrbanDrive Motors for a weekend event and had a pleasant experience overall. The vehicle was clean, comfortable, and ready when promised."</p>
+                <h2 class="card-title">Erika Valdez</h2>
+                <h3>of Suntrail Events</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body w-full">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-harvey-lim.jpg">
+                <p class="mt-10 body-font">"We recently purchased a second-hand pickup from UrbanDrive Motors for our operations team. The process was simple, and the staff were transparent about the vehicle's condition."</p>
+                <h2 class="card-title">Harvey Lim</h2>
+                <h3>CEO, Peakline Logistics</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body w-full">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-camille-navarro.jpg">
+                <p class="mt-10 body-font">"UrbanDrive Motors may still be expanding its inventory, but the customer service already feels reliable. They were accommodating and easy to work with throughout the rental process."</p>
+                <h2 class="card-title">Camille Navarro</h2>
+                <h3>Producer, Blue Ember Media</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body w-full">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-darren-yu.jpg">
+                <p class="mt-10 body-font">"What stood out to me was how stress-free everything felt. The vehicle matched the listing, and there were no unnecessary complications during the transaction."</p>
+                <h2 class="card-title">Darren Yu</h2>
+                <h3>of Alderstone Trading</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body w-full">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-mika-fernandez.jpg">
+                <p class="mt-10 body-font">"We needed a vehicle rental on short notice, and UrbanDrive Motors was able to assist us quickly. The car was well-maintained, and the return process was convenient."</p>
+                <h2 class="card-title">Mika Fernandes</h2>
+                <h3>VP, Horizon Route Travel Services</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body w-full">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-noel-ramirez.jpg">
+                <p class="mt-10 body-font">"Buying a used work vehicle usually takes a lot of time and second-guessing, but UrbanDrive Motors made the experience easier than expected. The vehicle has been dependable for daily use."</p>
+                <h2 class="card-title">Noel Ramirez</h2>
+                <h3>President, Ironcrest Builders</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card md:w-145 md:h-85 xs:w-75 xs:h-125 bg-base-100 card-xl shadow-2xl border">
+              <div class="card-body w-full">
+                <img class="absolute md:bottom-[70%] xs:bottom-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-25 w-25 rounded-full rounded-box" src="../public/images/testi-selene-park.jpg">
+                <p class="mt-10 body-font">"I appreciate how approachable the team at UrbanDrive Motors was during the inquiry process. Everything felt honest, clear, and professional without being overly sales-focused."</p>
+                <h2 class="card-title">Selene Park</h2>
+                <h3>Founder, Crescent Eight Studio</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="mb-5 mx-5">
+  </section>
+
+  <section id="news-cta">
+    <div class="news-cta-cont flex flex-row justify-center items-center bg-center bg-no-repeat bg-[url('../public/images/bg-cta-partner.jpg')]">
+      <div class="img-cont xl:h-135 lg:h-125 md:h-115 xs:h-105">
+        <img class="rounded-l-3xl w-full h-full" src="../public/images/cta-newsletter-model.jpg">
+      </div>
+        <div class="hero bg-base-200 xl:h-135 lg:h-125 md:h-115 xs:h-105 lg:w-1/3 xs:w-2/3 rounded-r-3xl">
+          <div class="hero-content flex-col h-auto gap-0 p-2.5">
+            <div class="text-center">
+              <h1 class="xl:text-5xl md:text-2xl xs:text-lg font-bold md:p-6 xs:p-1">Want more offers?</h1>
+              <p class="xl:p-6 md:p-2 xs:p-1 md:text-sm xs:text-xs mb-2 body-font">
+                Subscribe to the UrbanDrive Motors newsletter and be the first to discover new vehicle arrivals, exclusive deals, and limited-time financing offers. Stay informed with expert automotive insights and updates designed to help you find the right vehicle at the right price.
+              </p>
+            </div>
+
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <div class="card-body p-2">
+                <fieldset class="fieldset">
+                  <label class="label pl-3">Email</label>
+                  <input type="email" class="input w-full" placeholder="Email" />
+                  <button class="btn btn-sm btn-neutral my-2 w-35 justify-self-center bg-amber-300 text-black">Subscribe</button>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <hr class="m-5">
+  </section>
+
+  <footer class="footer footer-horizontal footer-center bg-[#0F172A] text-primary-content p-5 gap-0">
+    <nav class="grid grid-flow-col gap-4 mb-5">
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav>
+    <aside class="my-5">
+      <img class="h-35 w-35" src="../public/images/ud-motors-logo-4.png">
+      <p class="font-bold">
+        UrbanDrive Motors
+        <br />
+        Providing reliable vehicles since 2026
+      </p>
+      <p>Copyright © 2026 - All right reserved</p>
+    </aside>
+    <nav>
+      <div class="grid grid-flow-col gap-4">
+        <a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="fill-current">
+            <path
+              d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+          </svg>
+        </a>
+        <a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="fill-current">
+            <path
+              d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+          </svg>
+        </a>
+        <a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="fill-current">
+            <path
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

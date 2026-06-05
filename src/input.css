@@ -1,0 +1,189 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+    --breakpoint-xs: 320px;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+
+.slide-images img {
+    display: none;
+}
+
+img.displaySlide {
+    display: block;
+}
+
+
+.new-arrivals-cont {
+    /* background: linear-gradient(135deg, hsla(192, 2%, 42%, 1) 11%, hsla(0, 0%, 96%, 1) 49%, hsla(264, 100%, 2%, 1) 89%); */
+}
+
+.modalOn {
+    display: block;
+}
+
+.hide-filter {
+    display: none;
+}
+
+.hero-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+.title-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+
+.body-font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-bottom-view-7ms {
+	-webkit-animation: slide-in-bottom 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-timeline:view();
+            animation-range-start: 10%;
+            animation-range-end: 35%;
+}
+
+.slide-in-bottom-view-4ms {
+	-webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-timeline:view();
+            animation-range-start: 10%;
+            animation-range-end: 35%;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out 3 both;
+	        animation: heartbeat 1.5s ease-in-out 3 both;
+}
