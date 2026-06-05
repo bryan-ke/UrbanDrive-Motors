@@ -2737,7 +2737,7 @@
     }
   }
   .bg-\[url\(\'\.\.\/public\/images\/bg-cta-partner\.jpg\'\)\] {
-    background-image: url("/images/bg-cta-partner.jpg");
+    background-image: url("images/bg-cta-partner.jpg");
   }
   .bg-center {
     background-position: center;
