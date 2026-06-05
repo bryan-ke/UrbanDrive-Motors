@@ -187,3 +187,7 @@ img.displaySlide {
 	-webkit-animation: heartbeat 1.5s ease-in-out 3 both;
 	        animation: heartbeat 1.5s ease-in-out 3 both;
 }
+
+.bg-cta-partner {
+  background-image: url('images/bg-cta-partner.jpg');
+}
